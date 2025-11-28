@@ -1,153 +1,142 @@
-## JobQuest – Job Search & Filtering Platform
+# 🧳 JobQuest – Job Search & Filtering Platform
 
-A complete job-search application built using React, featuring authentication, job listings, advanced filters, search functionality, job details page, loader states, failure handling, and protected routes.
+A complete job-search application built using **React**, featuring authentication, job listings, advanced filters, search functionality, job details pages, loader states, failure handling, and protected routes.
 
-This project was entirely developed by me from scratch as part of an assignment.
+This project was **entirely developed by me from scratch** as part of an assignment.
 
 ---
 
 ## 🔗 Live Demo
-
-Frontend: https://jobquest-app.netlify.app
+Netlify:  https://jobquest-app.netlify.app
 
 ---
 
 ## 🧪 Test Credentials
+Use the following credentials to log in:
 
-Use the following credentials to access the application:
+- **Username:** `rahul`
+- **Password:** `rahul@2021`
 
--Username: rahul
--Password: rahul@2021
-
-(Default credentials provided by API service)
+*(Default credentials provided by the API service)*
 
 ---
+
 ## ✨ Features
 
 ### 🔒 Authentication
-
 - Secure login using JWT tokens
-- Authentication stored using cookies
-- Users redirected to login on unauthorized access
+- Authentication stored in cookies
+- Unauthorized users are redirected to login
 
 ### 🔍 Job Listings
-
-- Fetch jobs dynamically from backend API
-- Displays company logo, title, rating, location, package
+- Fetches jobs dynamically from API
+- Shows company logo, title, rating, location, and package
 
 ### 🎯 Advanced Filters
-
-- Employment type filter (Full-time, Part-time, Internship, Freelance)
-- Salary range filter
-- Multi-select handling for employment filters
+- Filter by employment type (Full-time, Part-time, Internship, Freelance)
+- Filter by salary range
+- Supports multi-select employment filters
 
 ### 🔎 Search
-
-- Search jobs by title or keywords
-
-- Debounced search updates job list dynamically
+- Search jobs by keywords
+- Automatically updates results on typing (debounced search)
 
 ### 📌 Job Details Page
-
-- Complete job description
+- Detailed job description
 - Skills list
-- Life at company section
+- “Life at Company” section
 - Similar jobs suggestions
 
 ### 🚦 API Status Management
+- Loader state using `react-loader-spinner`
+- Custom error screen for failed API calls
+- Retry mechanism
 
-- Loader UI (loading state)
-- Customized error/failure UI
-- Retry mechanism for failed API calls
-  
 ### 🧭 Routing & Navigation
-
 - Implemented using React Router
-- Protected routes (cannot access jobs without login)
-- Not Found page
+- Protected routes (requires login)
+- Custom 404 Not Found page
 
 ---
 
 ## 🛠 Tech Stack
 
-- Frontend
+### Frontend
 - React (Class Components)
 - React Router
 - JavaScript (ES6+)
 - CSS
-- Utilities
-- js-cookie — manage JWT tokens
-- react-loader-spinner — loading animations'
 
----
+### Utilities
+- `js-cookie` – JWT token handling
+- `react-loader-spinner` – loading animations
 
 ## 📁 Project Structure
 
+```
 src/
  ├── components/
- │    ├── LoginForm
  │    ├── Header
+ │    ├── LoginForm
  │    ├── ProfileAndJobFilters
  │    ├── JobCard
  │    ├── JobItemDetails
  │    ├── NotFound
- │    └── Jobs   <-- Advanced filtering logic
+ │    └── Jobs
  ├── App.js
- └── index.js
- 
----
+ ├── index.js
+ └── index.css
+```
 
 ## 🚀 API Endpoints Used
 
-Base URL: https://apis.ccbp.in
+**Base URL:** https://apis.ccbp.in
 
-Endpoints:
-
-- /login
-
-- /jobs?employment_type=...&minimum_package=...&search=...
-
-- /jobs/:id
+### Endpoints:
+- `/login`
+- `/jobs?employment_type=...&minimum_package=...&search=...`
+- `/jobs/:id`
 
 ---
 
 ## 🧩 Key Concepts Implemented
-
 - State lifting
 - Conditional rendering
-- Higher-order components for route protection
-- API integration + error handling
-- Mapping + filtering + UI rendering
-- Dynamic URL parameters (/jobs/:id)
-- Efficient state updates using prevState
+- Protected routes (Higher-order component approach)
+- API integration & error handling
+- Dynamic URL parameters (`/jobs/:id`)
+- Efficient state updates using `prevState`
+- Reusable UI components
 
 ---
 
 ## 📸 Screenshots
 
-![Login Page](./public/screenshots/login.png)
-![Jobs List](./public/screenshots/home.png)
+![Login Page](./public/screenshots/job_login.png)
+![Jobs List](./public/screenshots/job_home.png)
 ![Jobs List](./public/screenshots/jobs.png)
-![Jobs List](./public/screenshots/job-detail.png)
+![Jobs List](./public/screenshots/job_details.png)
 
 ---
 
 ## 🏁 How to Run Locally
-
-- git clone https://github.com/shalini2376/JobQuest
-- cd JobQuest
-- npm install
-- npm start
+```bash
+git clone https://github.com/shalini2376/JobQuest
+cd JobQuest
+npm install
+npm start
 
 ---
 
 ## 🌟 About This Project
 
-- This project improved my understanding of:
-- Writing clean React architecture
-- Managing complex filters
-- Handling multiple API states
-- Implementing protected routes
-- Writing reusable UI components
-- Working with JWT + cookies
-- Debugging and fixing build issues for production (Netlify deployment)
+This project strengthened my understanding of:
+
+- Clean React architecture
+- Designing multi-filter systems
+- Handling complex API states
+- Building protected routes
+- Managing JWT authentication
+- Creating reusable components
+- Debugging and preparing production builds (Netlify)
+
