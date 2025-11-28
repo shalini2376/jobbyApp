@@ -16,8 +16,8 @@ Frontend: https://jobquest-app.netlify.app
 
 Use the following credentials to access the application:
 
-Username: rahul
-Password: rahul@2021
+-Username: rahul
+-Password: rahul@2021
 
 (Default credentials provided by API service)
 
@@ -133,10 +133,10 @@ Endpoints:
 
 ## 🏁 How to Run Locally
 
-git clone https://github.com/shalini2376/JobQuest
-cd JobQuest
-npm install
-npm start
+- git clone https://github.com/shalini2376/JobQuest
+- cd JobQuest
+- npm install
+- npm start
 
 ---
 
